@@ -1,12 +1,192 @@
-.navbar-lewagon {
+// .Navbar {
+//   display: flex;
+//   padding: 16px;
+//   font-family: sans-serif;
+//   color: white;
+// }
+
+// .navbar {
+//   font-size: 18px;
+//   background-image: linear-gradient(260deg, #be71a1 0%, #460309 100%);
+//   border: 1px solid rgba(0, 0, 0, 0.2);
+//   padding-bottom: 10px;
+// }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 70%;
+    font-family: 'Roboto', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header{
+  border-bottom: 1px solid rgba(218, 165, 209, 0.342);;
+}
+
+.navbar {
+  display: flex;
   justify-content: space-between;
-  background: white;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  font-size: 18px;
+  background-image: linear-gradient(260deg, #be71a1 0%, #460309 100%);
+  padding-bottom: 2px;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.hamburger {
+  display: none;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #951280;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 1rem;
+}
+
+.nav-link{
+  font-size: 1.8rem;
+  font-weight: 500;
+  font-family: 'Lato', sans-serif;
+  color: #ffffff;
+  position: relative;
+  right: 10px;
+}
+
+.nav-link:hover{
+  color: #74314e;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+:root {
+  --rad: .9rem;
+  --dur: .3s;
+  --color-dark: #ffffff;
+  --color-light: rgb(200, 158, 191);
+  --color-brand: #74314e;
+  --font-fam: 'Lato', sans-serif;
+  --height: 4rem;
+  --btn-width: 5rem;
+  --bez: cubic-bezier(0, 0, 0.43, 1.49);
+}
+
+
+// Main styles
+form {
+  position: relative;
+  width: 25rem;
+  background: var(--color-brand);
+  border-radius: var(--rad);
+}
+input, button {
+  height: var(--height);
+  font-family: var(--font-fam);
+  border: 0;
+  color: var(--color-dark);
+  font-size: 1.6rem;
+}
+input[type="search"] {
+  outline: 0; // <-- shold probably remove this for better accessibility, adding for demo aesthetics for now.
+  width: 100%;
+  background: var(--color-light);
+  padding: 0 1.6rem;
+  border-radius: var(--rad);
+  appearance: none; //for iOS input[type="search"] roundedness issue. border-radius alone doesn't work
+  transition: all var(--dur) var(--bez);
+  transition-property: width, border-radius;
+  z-index: 1;
+  position: relative;
+}
+button {
+  display: none; // prevent being able to tab to it
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: var(--btn-width);
+  font-weight: bold;
+  background: var(--color-brand);
+  border-radius: 0 var(--rad) var(--rad) 0;
+}
+input:not(:placeholder-shown) {
+  border-radius: var(--rad) 0 0 var(--rad);
+  width: calc(100% - var(--btn-width));
+  + button {
+    display: block;
+  }
+}
+label {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
 }

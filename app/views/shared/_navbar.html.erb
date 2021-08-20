@@ -1,0 +1,25 @@
+<header class="header">
+        <nav class="navbar">
+            <a href="#" class="nav-logo"><%= image_tag "popcorn.png", alt: "alttext", class: "popcorn" %></a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <%= link_to "New list", new_list_path, class: "nav-link" %>
+                </li>
+                <li class="nav-item">
+                    <%= link_to "My lists", root_path, class: "nav-link" %>
+                </li>
+								<li>
+								<form onsubmit="event.preventDefault();" role="search">
+									<label for="search">Search for stuff</label>
+									<input id="search" type="search" placeholder="Search..." autofocus required />
+									<button type="submit">Go</button>    
+									</form>
+								</li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+</header>

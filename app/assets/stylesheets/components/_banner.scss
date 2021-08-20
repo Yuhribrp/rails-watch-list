@@ -1,0 +1,38 @@
+.banner {
+    background-size: cover;
+		background-repeat: no-repeat;
+    background-position: center;
+    padding: 190px 0;
+    background-image: linear-gradient(rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 20%), url('cinema2.jpg');
+    -webkit-mask-image: linear-gradient(to top, transparent 0,1%, rgb(0, 0, 0) 5%);
+  }
+  
+  .banner h1 {
+		position: relative;
+		top: 150px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 55px;
+    font-family: monospace;
+    animation: flicker 3s infinite alternate;
+    color: rgb(252, 252, 252);
+		font-weight: bolder;
+  }
+  @keyframes flicker {
+      
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px rgb(255, 69, 69),
+        0 0 11px rgb(255, 69, 69),
+        0 0 19px rgb(255, 69, 69),
+        0 0 40px #d61424,
+        0 0 80px #d61424,
+        0 0 90px #d61424,
+        0 0 100px #d61424,
+        0 0 150px #d61424;
+    }
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }
+  }

@@ -15,3 +15,12 @@ import 'bootstrap';
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+import { mobileMenu } from '../components/navbar';
+import { closeMenu } from '../components/navbar';
+
+document.addEventListener('turbolinks:load', () => {
+  // Call your JS functions here
+  mobileMenu();
+  closeMenu();
+});
