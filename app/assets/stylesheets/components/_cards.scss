@@ -11,7 +11,7 @@
 	font-weight: bold;
 	text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
 	box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
-	background-image: url('list.jpg');
+	background-image: image-url('list.jpg');
 	opacity: .95;
 	border-top-right-radius: 25px;
 	border-top-left-radius: 25px;
@@ -34,5 +34,5 @@
   .card-large {
 	height: 50vh;
 	max-height: 400px;
-	background-image: url('list.jpg');
+	background-image: img-url('list.jpg');
   }
