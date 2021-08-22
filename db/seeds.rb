@@ -14,16 +14,16 @@ require 'json'
 
 
 url = "http://tmdb.lewagon.com/movie/top_rated"
-5.times do |i|
+10.times do |i|
 	puts "Importing Movies.. #{i + 1}"
 	movies = JSON.parse(open("#{url}?page=#{i + 1}").read)['results']
 	movies.each do |movie|
 		puts "Creating #{movie['title']}"
-		base_url = "https://image.tmdb.org/"
+		base_url = "https://image.tmdb.org/t/p/original"
 		Movie.create(
 			title: movie['title'],
 			overview: movie['overview'],
-			poster_url:"#{base_url}#{movie['backdrop_path']}",
+			poster_url:"#{base_url}#{movie['poster_path']}",
 			rating: movie['vote_avarage']
 		)
 	end

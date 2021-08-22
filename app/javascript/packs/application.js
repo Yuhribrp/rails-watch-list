@@ -18,9 +18,11 @@ import 'bootstrap';
 
 import { mobileMenu } from '../components/navbar';
 import { closeMenu } from '../components/navbar';
+import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
   mobileMenu();
   closeMenu();
+  initSelect2();
 });

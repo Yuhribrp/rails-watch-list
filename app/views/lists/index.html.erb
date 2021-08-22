@@ -3,17 +3,17 @@
     <h1>Save any kind of movies</h1>
   </div>
 </div>
-<div class="container py-4">
+<div class="container py-5">
 	<div class="d-flex align-items-center justify-content-between mb-5">
-		<h2> My Lists </h2>
-		<%= link_to 'Create a movie list', new_list_path, class: 'btn btn-danger' %>
+		<h2 class="my-lists"> My Lists </h2>
+		<%= link_to 'Create list', new_list_path, class: 'btn btn-primary'%>
 	</div>	
 	<div class="row">
 		<% @list.each do |list| %>
-			<div class="co-12 colsm-6 col-md-4 mb-3">
+			<div class="co-12 colsm-6 col-md-6 mb-5">
 				<%= link_to list_path(list), class:'text-decoration-none' do %>
-					<div class="card-category">
-						<%= list.name %>
+					<div class="card-category card-style" style="background-image: url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : asset_path('list.jpg') %>)">
+						<p class="list-name"><%= list.name %></p>
           </div>
         <% end %>
       </div>

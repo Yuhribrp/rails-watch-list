@@ -1,3 +1,34 @@
 body {
-	background-color: rgb(255, 240, 249);
+	background-image: repeating-linear-gradient(135deg, rgba(189,189,189,0.1) 0px, rgba(189,189,189,0.1) 2px,transparent 2px, transparent 4px),linear-gradient(90deg, rgba(241, 241, 241, 0.822),rgb(233, 233, 233));
+	margin: 0 auto;
+}
+
+
+.my-lists {
+	font-size: 40px;
+	font-weight: 600;
+	font-family: 'Libre Franklin', sans-serif;
+	text-shadow: 1.5px 1.5px 3px rgb(255, 255, 255);
+	color:rgba(51, 7, 7, 0.794);
+	position: relative;
+	left: 453px;
+}
+
+.list-name {
+	font-family: 'Libre Franklin', sans-serif;
+	font-size: 40px;
+	text-shadow: 1.5px 1.5px 3px black;
+}
+
+.no-movies {
+	font-size: 20px;
+	position: relative;
+	left: 410px;
+	top: 50px;
+}
+	
+.list-title {
+	font-family: 'Libre Franklin', sans-serif;
+	font-size: 50px;
+	text-shadow: 1.5px 1.5px 3px black;
 }

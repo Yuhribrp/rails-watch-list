@@ -1,0 +1,64 @@
+.movie-img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: auto;
+}
+
+.movie-tag {
+  color: white;
+  padding: 6px 16px;
+  border-radius: 4px;
+  background: #ef96ffbe;
+  transition: background 0.3s ease;
+  position: absolute;
+  top: 7.5rem;
+  right: .9rem;
+}
+
+.title {
+  font-size: 15px;
+}
+
+.fa-star {
+  font-size: 11px;
+	color: gold;
+}
+
+.text-danger {
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+
+
+.comment {
+	font-size: 13px;
+	position: absolute;
+	bottom: 5px;
+	left: 35px;
+}
+
+.overview {
+	font-size: 13px;
+}
+
+.fa-quote-left {
+	font-size: 13px;
+	position: absolute;
+	bottom: 10px;
+	left: 20px;
+}
+
+.text-right {
+	font-size: 13px;
+	position: absolute;
+	bottom: 1px;
+	right: 20px;
+}
+
+// h4 {
+//   position: relative;
+//   top: 530px;
+//   right: 375px;
+// }

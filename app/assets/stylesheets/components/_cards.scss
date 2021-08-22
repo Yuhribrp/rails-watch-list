@@ -7,32 +7,33 @@
 	justify-content: center;
 	align-items: center;
 	color: rgb(240, 240, 240);
+	font-weight: bold;
+	text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+	box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+	background-image: image-url('list.jpg');
+	opacity: .95;
+}
+
+  .card-style {
+	background-size: cover;
+	background-position: center;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: rgb(240, 240, 240);
 	font-size: 26px;
 	font-weight: bold;
 	text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
 	box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
 	background-image: image-url('list.jpg');
 	opacity: .95;
-	border-top-right-radius: 25px;
-	border-top-left-radius: 25px;
-}
-
-  .card {
-	background-size: cover;
-	background-position: center;
-	height: 180px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: white;
-	font-size: 24px;
-	font-weight: bold;
-	text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-	box-shadow: 0 0 15px rgba(0,0,0,0.2);
+	border-top-right-radius: 60px;
+	border-top-left-radius: 60px;
   }
   
   .card-large {
 	height: 50vh;
 	max-height: 400px;
-	background-image: img-url('list.jpg');
+	background-image: image-url('list.jpg');
   }

@@ -7,7 +7,11 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin&family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Libre+Franklin&family=Rampart+One&display=swap');
 
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import 'select2/dist/css/select2';

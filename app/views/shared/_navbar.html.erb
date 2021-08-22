@@ -1,6 +1,6 @@
 <header class="header">
         <nav class="navbar">
-            <a href="#" class="nav-logo"><%= image_tag "popcorn.png", alt: "alttext", class: "popcorn" %></a>
+            <a class="nav-logo"><%= image_tag "popcorn.png", alt: "alttext", class: "popcorn" %></a>
             <ul class="nav-menu">
                 <li class="nav-item">
                     <%= link_to "New list", new_list_path, class: "nav-link" %>
@@ -10,7 +10,7 @@
                 </li>
 								<li>
 								<form class="navform" onsubmit="event.preventDefault();" role="search">
-									<label for="search">Search for stuff</label>
+									<label for="search">Search</label>
 									<input id="search" type="search" placeholder="Search..." autofocus required />
 									<button type="submit">Go</button>    
 									</form>
