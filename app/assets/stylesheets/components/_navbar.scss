@@ -79,10 +79,20 @@ a {
   color: #ffffff;
   position: relative;
   right: 10px;
+  padding: -10px;
 }
 
 .nav-link:hover{
-  color: #74314e;
+  color: rgb(252, 252, 252);
+  text-shadow:
+  0 0 4px rgb(250, 94, 203),
+  0 0 11px rgb(250, 94, 203),
+  0 0 19px rgb(250, 94, 203),
+  0 0 40px #d614c6,
+  0 0 80px #d614c6,
+  0 0 90px #d614c6,
+  0 0 100px #d614c6,
+  0 0 150px #d614c6;
 }
 
 

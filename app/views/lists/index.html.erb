@@ -12,7 +12,7 @@
 		<% @list.each do |list| %>
 			<div class="co-12 colsm-6 col-md-6 mb-5">
 				<%= link_to list_path(list), class:'text-decoration-none' do %>
-					<div class="card-category card-style" style="background-image: url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : asset_path('list.jpg') %>)">
+					<div class="main-card card-style" style="background-image: url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : asset_path('list.jpg') %>)">
 						<p class="list-name"><%= list.name %></p>
           </div>
         <% end %>

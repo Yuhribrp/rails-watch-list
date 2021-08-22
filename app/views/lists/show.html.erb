@@ -1,14 +1,7 @@
-<% if @list.photo.attached? %>
-  <div class="card-category" style='background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path @list.photo.key %>); height: 400px;'>
-  	<h1 class="list-title"><%= @list.name %></h1>
-		<span class="movie-tag"><%= pluralize(@list.movies.size, 'movie') %></span>
-  </div>
-<% else %>
-	<div>
-   <h1 class="list-title card-category card-large" ><%= @list.name %></h1>
-		 <span class="movie-tag"><%= pluralize(@list.movies.size, 'movie') %></span>
-	</div>	 
-<% end %>
+<div class="main-card card-banner" style='background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @list.photo.attached? ? cl_image_path(@list.photo.key) : asset_path('list.jpg') %>);'>
+  <h1 class="list-title"><%= @list.name %></h1>
+	<span class="movie-tag"><%= pluralize(@list.movies.size, 'movie') %></span>
+</div>
 <div class="buttons">
 	<%= link_to 'add a bookmark', new_list_bookmark_path(@list), class: "btn btn-primary"%>
   <%= link_to 'delete this list', list_path(@list), method: :delete, class: 'btn btn-cancel', data: { confirm: 'Are you sure?' } %>
