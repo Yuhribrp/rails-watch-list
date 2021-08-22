@@ -3,7 +3,7 @@ class ListsController < ApplicationController
 	before_action :set_list, only: [:show, :destroy]
 
   def index
-		@list = List.all
+		@lists = List.all
   end
 
 	def show
